@@ -1,0 +1,110 @@
+/* Variables */
+/* Navbar Toggler Icons */
+.navbar-toggler-icon[aria-expanded=true] {
+  background-image: url(/assets/icon-close.svg) !important;
+}
+
+.navbar-toggler-icon {
+  background-image: url(/assets/icon-hamburger.svg) !important;
+}
+
+/* Navbar Customizations */
+.navbar {
+  --bs-navbar-toggler-border-color: rgba(var(--bs-emphasis-color-rgb), 0) !important;
+  --bs-navbar-toggler-focus-width: 0rem !important;
+}
+
+/* Navbar Links */
+.navbar-nav .nav-item .nav-link {
+  letter-spacing: 0.1rem;
+  font-size: 0.7rem;
+  color: #000 !important;
+}
+
+.nav-tabs .nav-item .nav-link.active {
+  color: #000 !important;
+  border-bottom: 0.25rem solid #fa5959;
+}
+
+.nav-tabs .nav-item .nav-link {
+  color: #6c757d !important;
+  border: none;
+}
+
+.nav .nav-item .nav-link {
+  letter-spacing: 0.1rem;
+  font-size: 0.85rem;
+}
+
+.navbar-nav .nav-item .btn-danger {
+  color: #fff !important;
+  background-color: #fa5959 !important;
+  border: 1px solid transparent;
+}
+.navbar-nav .nav-item .btn-danger:hover {
+  background-color: #fff !important;
+  color: #000 !important;
+  border-color: #fa5959 !important;
+}
+
+/* Background Colors */
+.bg-primary2 {
+  background-color: #5265e1 !important;
+}
+
+/* Button Styles */
+.btn-primary {
+  background-color: #5265e1 !important;
+  border-color: #5265e1 !important;
+}
+.btn-primary:hover {
+  background-color: rgba(4, 35, 235, 0) !important;
+  color: #5265e1 !important;
+}
+
+.btn-danger {
+  background-color: #fa5959 !important;
+  color: #fff !important;
+}
+.btn-danger:hover {
+  background-color: #fff !important;
+}
+
+.btn-light {
+  background-color: #fff !important;
+  border-color: #fff !important;
+}
+.btn-light:hover {
+  color: #fa5959 !important;
+  border-color: #fff !important;
+}
+
+.btn-custom {
+  background-color: #e5e5e5 !important;
+}
+.btn-custom:hover {
+  color: #000 !important;
+  border-color: #000 !important;
+  background-color: rgba(211, 211, 211, 0) !important;
+}
+
+/* Custom pill Positioning */
+.pill {
+  background-color: #5265e1 !important;
+}
+
+.ctop-50 {
+  top: 60%;
+}
+
+.ch-50 {
+  height: 80%;
+}
+
+.w-50 {
+  height: 45%;
+}
+
+.margin-right-adjustment {
+  margin-left: 150px;
+}/*# sourceMappingURL=styles.css.map */

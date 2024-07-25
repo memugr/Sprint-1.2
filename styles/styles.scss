@@ -1,0 +1,118 @@
+/* Variables */
+$primary: #5265e1;
+$secondary: #fa5959;
+
+/* Navbar Toggler Icons */
+.navbar-toggler-icon[aria-expanded=true] {
+    background-image: url(/assets/icon-close.svg) !important;
+}
+
+.navbar-toggler-icon {
+    background-image: url(/assets/icon-hamburger.svg) !important;
+}
+
+/* Navbar Customizations */
+.navbar {
+    --bs-navbar-toggler-border-color: rgba(var(--bs-emphasis-color-rgb), 0) !important;
+    --bs-navbar-toggler-focus-width: 0rem !important;
+}
+
+/* Navbar Links */
+.navbar-nav .nav-item .nav-link {
+    letter-spacing: 0.1rem;
+    font-size: 0.70rem;
+    color: #000 !important; 
+}
+
+.nav-tabs .nav-item .nav-link.active {
+    color: #000 !important; 
+    border-bottom: 0.25rem solid $secondary;
+}
+
+.nav-tabs .nav-item .nav-link {
+    color: #6c757d !important; 
+    border: none;
+}
+
+.nav .nav-item .nav-link {
+    letter-spacing: 0.1rem;
+    font-size: 0.85rem;
+}
+
+.navbar-nav .nav-item .btn-danger {
+    color: #fff !important; 
+    background-color: $secondary !important;
+    border: 1px solid transparent; 
+
+    &:hover {
+        background-color: #fff !important;
+        color: #000 !important; 
+        border-color: $secondary !important; 
+    }
+}
+
+/* Background Colors */
+.bg-primary2 {
+    background-color: $primary !important;
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: $primary !important;
+    border-color: $primary !important;
+
+    &:hover {
+        background-color: #0423eb00 !important;
+        color: $primary !important;
+    }
+}
+
+.btn-danger {
+    background-color: $secondary !important;
+    color: #fff !important; 
+
+    &:hover {
+        background-color: #fff !important;
+    }
+}
+
+.btn-light {
+    background-color: #fff !important;
+    border-color: #fff !important;
+
+    &:hover {
+        color: $secondary !important;
+        border-color: #fff !important;
+    }
+}
+
+.btn-custom {
+    background-color: #e5e5e5 !important;
+
+    &:hover {
+        color: #000 !important;
+        border-color: #000 !important;
+        background-color: #d3d3d300 !important;
+    }
+}
+
+/* Custom pill Positioning */
+.pill {
+    background-color: $primary !important;
+}
+
+.ctop-50 {
+    top: 60%;
+}
+
+.ch-50 {
+    height: 80%;
+}
+
+.w-50 {
+    height: 45%;
+}
+
+.margin-right-adjustment {
+    margin-left: 150px;
+}
