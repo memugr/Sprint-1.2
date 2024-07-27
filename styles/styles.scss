@@ -125,3 +125,17 @@ $secondary: #fa5959;
     color: $secondary !important;
     border-bottom-color: transparent;
 }
+
+/* Accordion from FAQs */
+.accordion-button:not(.collapsed) {
+    background-color: transparent !important;
+}
+.accordion {
+--bs-accordion-btn-focus-box-shadow: unset !important;
+}
+.accordion-button:hover {
+    color: $secondary !important;
+}
+.accordion-button:not(.collapsed)::after {
+    filter: invert(56%) sepia(38%) saturate(3482%) hue-rotate(325deg) brightness(99%) contrast(97%);
+}
