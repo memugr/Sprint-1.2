@@ -20,6 +20,9 @@
   font-size: 0.7rem;
   color: #000 !important;
 }
+.navbar-nav .nav-item .nav-link:hover {
+  color: #fa5959 !important;
+}
 
 .nav-tabs .nav-item .nav-link.active {
   color: #000 !important;
@@ -43,7 +46,7 @@
 }
 .navbar-nav .nav-item .btn-danger:hover {
   background-color: #fff !important;
-  color: #000 !important;
+  color: #fa5959 !important;
   border-color: #fa5959 !important;
 }
 

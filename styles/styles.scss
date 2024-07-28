@@ -22,6 +22,11 @@ $secondary: #fa5959;
     letter-spacing: 0.1rem;
     font-size: 0.70rem;
     color: #000 !important; 
+
+    &:hover {
+        color: $secondary !important
+    }
+    
 }
 
 .nav-tabs .nav-item .nav-link.active {
@@ -46,7 +51,7 @@ $secondary: #fa5959;
 
     &:hover {
         background-color: #fff !important;
-        color: #000 !important; 
+        color: $secondary !important; 
         border-color: $secondary !important; 
     }
 }
