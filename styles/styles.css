@@ -134,4 +134,29 @@
 
 .accordion-button:not(.collapsed)::after {
   filter: invert(56%) sepia(38%) saturate(3482%) hue-rotate(325deg) brightness(99%) contrast(97%);
+}
+
+/* Footer */
+.bg-foot-end {
+  background-color: #242946;
+}
+
+a:hover {
+  color: #fa5959 !important;
+}
+
+.social:hover {
+  filter: invert(56%) sepia(38%) saturate(3482%) hue-rotate(325deg) brightness(99%) contrast(97%);
+}
+
+.btn-danger:hover {
+  color: #fa5959 !important;
+  border: 1px solid #fa5959;
+  background-color: white !important;
+}
+
+.invalid-feedback {
+  background-color: #fa5959;
+  color: #fff;
+  border: #fa5959;
 }/*# sourceMappingURL=styles.css.map */

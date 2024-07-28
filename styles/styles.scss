@@ -139,3 +139,28 @@ $secondary: #fa5959;
 .accordion-button:not(.collapsed)::after {
     filter: invert(56%) sepia(38%) saturate(3482%) hue-rotate(325deg) brightness(99%) contrast(97%);
 }
+
+/* Footer */
+.bg-foot-end {
+    background-color: #242946;
+}
+
+a:hover {
+    color: $secondary !important;
+}
+
+.social:hover {
+    filter: invert(56%) sepia(38%) saturate(3482%) hue-rotate(325deg) brightness(99%) contrast(97%);
+}
+
+.btn-danger:hover {
+    color: $secondary !important;
+    border: 1px solid $secondary;
+    background-color: white !important; 
+}
+
+.invalid-feedback {
+    background-color: $secondary;
+    color: #fff;
+    border: $secondary
+}
