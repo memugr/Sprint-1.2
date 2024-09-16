@@ -1,344 +1,286 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bookmark Manager</title>
-    <link rel="icon" href="assets/favicon-32x32.png" type="image/x-icon">
+	<!-- Metadata-->
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<meta name="description" content="Sprint 2.2 - E-Commerce"/>
+	<meta name="author" content="Mei"/>
+	<title>IT Academy Shop</title>
+	
+	<!-- Favicon-->
+	<link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
-
-    <!-- CSS styles, compiled from SCSS -->
-    <link rel="stylesheet" href="./styles/styles.css">
+	<!-- Fontawesome icons-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+		integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body>
-    <!-- EXERCICI 1 -->
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
-        <div class="container justify-space-between">
-            <a class="navbar-brand col-md5" href="#">
-                <img src="/assets/logo-bookmark.svg" height="24" alt="logo">
-            </a>
+<body data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="50">
+	<!-- Navigation-->
+	<nav class="navbar bg-white fixed-top bg-white navbar-expand-lg" id="navbar-example2">
+		<div class="container d-flex">
+			<a class="navbar-brand" href="index.html">IT Academy Shop</a>
+			<div class="d-flex flex-row order-lg-last align-items-center">
 
-            <button class="navbar-toggler justify-content-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"></span>
-            </button>
-        
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <ul class="navbar-nav ms-lg-auto mb-2 mb-lg-0 pe-lg-5 me-lg-4 text-uppercase align-items-center">
-                    <li class="nav-item">
-                        <a class="nav-link mx-2 text-dark" aria-current="page" href="#features">FEATURES</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link mx-2 text-dark" href="#pricing">PRICING</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link mx-2 text-dark" href="#contact">CONTACT</a>
-                    </li>
-                    <li class="nav-item">
-                        <button type="button" class="btn btn-danger text-white nav-link mx-2 py-2 px-4 ">LOGIN</button>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+				<button type="button" class="navbar-toggler order-last collapsed" data-bs-toggle="collapse"
+					data-bs-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<ul class="navbar-nav me-3 me-lg-0 d-flex flex-row align-items-center">
+					<li class="dropdown search-dropdown nav-item py-lg-3">
+						<a href="javascript:void(0)" class="btn btn-outline-dark flex-center" type="button"
+							data-bs-toggle="modal" data-bs-target="#cartModal" onclick="open_modal()"
+							data-bs-auto-close="outside">
+							<i class="fas fa-shopping-cart me-1"></i> Cart <span
+								class="badge bg-dark text-white ms-1 rounded-pill" id="count_product">0</span>
+						</a>
+					</li>
+				</ul>
+			</div>
 
-    <!-- Header/Intro -->
-    <div class="container mx-auto">
-        <div class="row align-items-center mt-5 flex-column-reverse flex-md-row">
-            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-4">
-                <h1 class="fw-medium display-5 mt-4 me-3">A simple Bookmark Manager</h1>
-                <p class="p-1 text-black-50">
-                    A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free.
-                </p>
-                <div class="row">
-                    <div class="col-md-12 d-flex justify-content-md-start justify-content-center">
-                        <a href="#" class="btn btn-primary shadow">Get it on Chrome</a>
-                        <a href="#" class="btn btn-custom shadow mx-4">Get it on Firefox</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col mt-5 align-content-center">
-                <img src="assets/illustration-hero.svg" class="img-fluid shadow-left">
-                <div class="position-absolute ctop-50 start-50 translate-middle-y rounded-start-pill bg-primary2 w-50 ch-50 z-n1 margin-right-adjustment"></div>
-            </div>
-        </div>
-    </div>
+			<div id="navbar" class="navbar-collapse collapse">
 
-    <!-- EXERCICI 2-->
-    <!-- Features: intro -->
-    <a id="features"></a>
-    <div class="row justify-content-center text-center m-4">
-        <div class="col-lg-6 col-12 mt-5">
-            <h2 class="m-3">Features</h2>
-            <p class="m-3 text-black-50 justify-content-center">Our aim is to make it quick and easy for you to acces your favourite websites. Your bookmarks sync between your devices so you can access them on the go.</p>
-        </div>
-    </div> 
+				<ul class="navbar-nav me-auto mb-4 mb-lg-0 ms-lg-5">
+					<li class="nav-item">
+						<a class="nav-link" href="#grocery"><i class="fas fa-shopping-basket"></i> Grocery</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#beauty"><i class="fas fa-heart"></i> Beauty</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#clothes"><i class="fas fa-tshirt"></i> Clothes</a>
+					</li>
 
-    <!-- Features: tabs -->
-    <ul class="nav nav-underline justify-content-center gap-0 z-4" id="featuresTab" role="tablist">
-        <li class="nav-item text-center border-bottom col-8 col-lg-2" role="presentation">
-            <a class="nav-link active text-black-50 p-3 justify-content-center" data-bs-toggle="tab" aria-controls="simpleBookmarking" href="#simple" role="tab">Simple Bookmarking</a>
-        </li>
-        <li class="nav-item text-center border-bottom col-8 col-lg-2" role="presentation">
-            <a class="nav-link text-black-50 p-3 justify-content-center" data-bs-toggle="tab" aria-controls="speedySearching" href="#speedy" role="tab">Speedy Searching</a>
-        </li>
-        <li class="nav-item text-center border-bottom col-8 col-lg-2" role="presentation">
-            <a class="nav-link text-black-50 p-3 justify-content-center" data-bs-toggle="tab" aria-controls="easySharing" href="#easy" role="tab">Easy Sharing</a>
-        </li>
-    </ul>
+				</ul>
+			</div>
+		</div>
+	</nav>
 
-    <!-- Features: simple bookmarking -->
-    <div class="tab-content featuresTab">
-        <div class="tab-pane active" id="simple" role="tabpanel">
-            <div class="row my-5 pt-1 justify-content-lg-start justify-content-center g-0">
-                <div class="col-lg-6 col-12 position-relative d-grid justify-content-lg-end justify-content-center" style="height: 420px;">
-                    <img src="assets/illustration-features-tab-1.svg" class="img-fluid z-3 d-grid">
-                    <div class="position-absolute bottom-0 start-0 rounded-end-pill bg-primary2 w-75 h-75 z-n1"></div>
-                </div>
-                <div class="col-lg-4 col-12 align-self-center ps-lg-5 ms-lg-5 text-lg-start text-center my-5">
-                    <h2 class="m-3">Bookmark in one click</h2>
-                    <p class="text-black-50 m-3">Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.</p>
-                    <button class="btn btn-primary m-3">More Info</button>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Features: speedy searching -->
-        <div class="tab-pane" id="speedy" role="tabpanel">
-            <div class="row my-5 pt-1 justify-content-lg-start justify-content-center g-0">
-                <div class="col-lg-6 col-12 position-relative d-grid justify-content-lg-end justify-content-center" style="height: 420px;">
-                    <img src="assets/illustration-features-tab-2.svg" class="img-fluid z-3 d-grid">
-                    <div class="position-absolute bottom-0 start-0 rounded-end-pill bg-primary2 w-75 h-75 z-n1"></div>
-                </div>
-                <div class="col-lg-4 col-12 align-self-center ps-lg-5 ms-lg-5 text-lg-start text-center my-5">
-                    <h2 class="m-3">Intelligent search</h2>
-                    <p class="text-black-50 m-3">Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.</p>
-                    <button class="btn btn-primary m-3">More Info</button>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Features: easy saring -->
-        <div class="tab-pane" id="easy" role="tabpanel">
-            <div class="row my-5 pt-1 justify-content-lg-start justify-content-center g-0">
-                <div class="col-lg-6 col-12 position-relative d-grid justify-content-lg-end justify-content-center" style="height: 420px;">
-                    <img src="assets/illustration-features-tab-3.svg" class="img-fluid z-3 d-grid">
-                    <div class="position-absolute bottom-0 start-0 rounded-end-pill bg-primary2 w-75 h-75 z-n1"></div>
-                </div>
-                <div class="col-lg-4 col-8 align-self-center ps-lg-5 ms-lg-5 my-5 text-lg-start text-center">
-                    <h2 class="m-3 text-lg-start text-center">Share your bookmarks</h2>
-                    <p class="text-black-50 m-3 text-lg-start text-center">Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.</p>
-                    <button class="btn btn-primary m-3">More Info</button>
-                </div>
-            </div>
-        </div>
-    </div>
+	<!-- Header-->
+	<header class="bg-dark py-5">
+		<div class="container px-4 px-lg-5 my-5">
+			<div class="container my-5"><br></div>
+			<div class="text-center text-white">
+				<h1 class="display-4 fw-bolder">IT Academy Shop</h1>
+				<p class="lead fw-normal text-white-50 mb-0">Get up to 50% off Today Only!</p>
+			</div>
+		</div>
+	</header>
+	<!-- Section-->
+	<section class="pt-5" id="grocery">
+		<h2 class="text-center"><i class="fas fa-shopping-basket pe-3"></i>Grocery</h2>
+		<div class="container px-4 px-lg-5 mt-5">
+			<div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+				<div class="col mb-5">
+					<div class="card h-100">
+						<img class="card-img-top" src="./images/product.svg" alt="..." />
+						<div class="card-body p-4">
+							<div class="text-center">
+								<h5 class="fw-bolder">Cooking Oil</h5>
+								$10.5
+							</div>
+						</div>
+						<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+							<div class="text-center"><button type="button" onclick="buy(1)"
+									class="btn btn-outline-dark">Add to cart</button></div>
+						</div>
+					</div>
+				</div>
+				<div class="col mb-5">
+					<div class="card h-100">
+						<img class="card-img-top" src="./images/product.svg" alt="..." />
+						<div class="card-body p-4">
+							<div class="text-center">
+								<h5 class="fw-bolder">Pasta</h5>
+								$6.25
+							</div>
+						</div>
+						<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+							<div class="text-center"><button type="button" onclick="buy(2)"
+									class="btn btn-outline-dark">Add to cart</button></div>
+						</div>
+					</div>
+				</div>
+				<div class="col mb-5">
+					<div class="card h-100">
+						<img class="card-img-top" src="./images/product.svg" alt="..." />
+						<div class="card-body p-4">
+							<div class="text-center">
+								<h5 class="fw-bolder">Instant cupcake mixture</h5>
+								$5
+							</div>
+						</div>
+						<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+							<div class="text-center"><button type="button" onclick="buy(3)"
+									class="btn btn-outline-dark">Add to cart</button></div>
+						</div>
+					</div>
+				</div>
 
-    <!-- EXERCICI 3 -->
-    <!-- Downloading -->
-    <a id="pricing"></a>
-    <div class="row justify-content-center text-center m-4">
-        <div class="col-lg-4 col-12 mt-5">
-            <h2 class="m-3">Download the extension</h2>
-            <p class="m-3 text-black-50">We've got more browsers in the pipeline. Please do let us know if you've got a favourite you'd like us to prioritize.</p>
-        </div>
-    </div>
+			</div>
+		</div>
+	</section>
+	<section class="pt-5" id="beauty">
+		<h2 class="text-center"><i class="fas fa-heart pe-3"></i>Beauty</h2>
+		<div class="container px-4 px-lg-5 mt-5">
+			<div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+				<div class="col mb-5">
+					<div class="card h-100">
+						<img class="card-img-top" src="./images/product.svg" alt="..." />
+						<div class="card-body p-4">
+							<div class="text-center">
+								<h5 class="fw-bolder">All-in-1</h5>
+								$260
+							</div>
+						</div>
+						<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+							<div class="text-center"><button type="button" onclick="buy(4)"
+									class="btn btn-outline-dark">Add to cart</button></div>
+						</div>
+					</div>
+				</div>
+				<div class="col mb-5">
+					<div class="card h-100">
+						<img class="card-img-top" src="./images/product.svg" alt="..." />
+						<div class="card-body p-4">
+							<div class="text-center">
+								<h5 class="fw-bolder">Zero makeup kit</h5>
+								$20.5
+							</div>
+						</div>
+						<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+							<div class="text-center"><button type="button" onclick="buy(5)"
+									class="btn btn-outline-dark">Add to cart</button></div>
+						</div>
+					</div>
+				</div>
+				<div class="col mb-5">
+					<div class="card h-100">
+						<img class="card-img-top" src="./images/product.svg" alt="..." />
+						<div class="card-body p-4">
+							<div class="text-center">
+								<h5 class="fw-bolder">Lip tints</h5>
+								$12.75
+							</div>
+						</div>
+						<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+							<div class="text-center"><button type="button" onclick="buy(6)"
+									class="btn btn-outline-dark">Add to cart</button></div>
+						</div>
+					</div>
+				</div>
 
-    <!-- Chrome -->
-    <div class="row justify-content-center g-0">
-        <div class="col-7 col-lg-3 mx-lg-4 align-self-lg-start">
-            <div class="card border-0 shadow mb-4 mt-lg-1 rounded-4">
-                <img src="assets/logo-chrome.svg" class="card-img-top w-50 mx-auto my-5 img-fluid" alt="Chrome">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Add to Chrome</h5>
-                    <p class="card-text">Minimum version 62</p>
-                    <img src="assets/bg-dots.svg" class="w-100">
-                    <div class="p-3">
-                        <button class="btn btn-primary w-100 py-3 mt-2">Add & Install Extension</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+			</div>
+		</div>
+	</section>
+	<section class="pt-5" id="clothes">
+		<h2 class="text-center"><i class="fas fa-tshirt pe-3"></i>Clothes</h2>
+		<div class="container px-4 px-lg-5 mt-5">
+			<div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+				<div class="col mb-5">
+					<div class="card h-100">
+						<img class="card-img-top" src="./images/product.svg" alt="..." />
+						<div class="card-body p-4">
+							<div class="text-center">
+								<h5 class="fw-bolder">Lawn dress</h5>
+								$15
+							</div>
+						</div>
+						<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+							<div class="text-center"><button type="button" onclick="buy(7)"
+									class="btn btn-outline-dark">Add to cart</button></div>
+						</div>
+					</div>
+				</div>
+				<div class="col mb-5">
+					<div class="card h-100">
+						<img class="card-img-top" src="./images/product.svg" alt="..." />
+						<div class="card-body p-4">
+							<div class="text-center">
+								<h5 class="fw-bolder">Lawn-chiffon combo</h5>
+								$19.99
+							</div>
+						</div>
+						<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+							<div class="text-center"><button type="button" onclick="buy(8)"
+									class="btn btn-outline-dark">Add to cart</button></div>
+						</div>
+					</div>
+				</div>
+				<div class="col mb-5">
+					<div class="card h-100">
+						<img class="card-img-top" src="./images/product.svg" alt="..." />
+						<div class="card-body p-4">
+							<div class="text-center">
+								<h5 class="fw-bolder">Toddler Frock</h5>
+								$9.99
+							</div>
+						</div>
+						<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+							<div class="text-center"><button type="button" onclick="buy(9)"
+									class="btn btn-outline-dark">Add to cart</button></div>
+						</div>
+					</div>
+				</div>
 
-    <!-- Firefox -->
-        <div class="col-7 col-lg-3 mx-lg-4 align-self-lg-center">
-            <div class="card border-0 shadow mb-4 mt-lg-2 rounded-4">
-                <img src="assets/logo-firefox.svg" class="card-img-top w-50 mx-auto my-5 img-fluid" alt="Firefox">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Add to Firefox</h5>
-                    <p class="card-text">Minimum version 55</p>
-                    <img src="assets/bg-dots.svg" class="w-100">
-                    <div class="p-3">
-                        <button class="btn btn-primary w-100 py-3 mt-2">Add & Install Extension</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+			</div>
+		</div>
+	</section>
 
-    <!-- Opera -->
-        <div class="col-7 col-lg-3 mx-lg-4 align-self-lg-end">
-            <div class="card border-0 shadow mb-4 mt-lg-5 rounded-4">
-                <img src="assets/logo-opera.svg" class="card-img-top w-50 mx-auto my-5 img-fluid" alt="Opera">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Add to Opera</h5>
-                    <p class="card-text">Minimum version 46</p>
-                    <img src="assets/bg-dots.svg" class="w-100">
-                    <div class="p-3">
-                        <button class="btn btn-primary w-100 py-3 mt-2">Add & Install Extension</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+	<!-- Footer-->
+	<footer class="py-3 bg-dark">
+		<div class="container">
+			<p class="m-0 text-center text-white">Copyright &copy; Your Website 2024</p>
+		</div>
+	</footer>
 
-    <!-- EXERCICI 4 -->
-    <!-- FAQs -->
-    <div class="row justify-content-center text-center m-5">
-        <!-- FAQ Heading and Description -->
-        <div class="col-lg-5 col-12">
-            <h2 class="m-3">Frequently Asked Questions</h2>
-            <p class="m-4 text-black-50">
-                Here are some of our FAQs. If you have any other questions you'd like answered please feel free to email us.
-            </p>
-        </div>
-    
-        <!-- Spacer for layout adjustment -->
-        <div class="w-80"></div>
-    
-        <!-- FAQ Accordion -->
-        <div class="col-lg-5 col-12">
-            <div class="accordion my-5" id="accordionExample">
-                <!-- FAQ Item 1 -->
-                <div class="accordion-item border-bottom border-top">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            What is Bookmark?
-                        </button>
-                    </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse show text-start" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tellus neque, varius ornare tincidunt ac, luctus non leo. Pellentesque rutrum velit augue, ac faucibus libero vehicula non. Etiam facilisis placerat orci, at egestas dui rhoncus placerat. Praesent sollicitudin tempor urna, vel efficitur mauris tempus vitae. Ut dapibus porttitor sapien nec porta. Nam dui augue, vestibulum a urna in, pharetra vulputate purus.</p>  
-                        </div>
-                    </div>
-                </div>
-    
-                <!-- FAQ Item 2 -->
-                <div class="accordion-item border-bottom">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            How can I request a new browser?
-                        </button>
-                    </h2>
-                    <div id="collapseTwo" class="accordion-collapse collapse text-start" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <p>Praesent fermentum mauris sit amet risus iaculis vestibulum. Donec pellentesque diam ipsum, vitae porttitor risus sagittis in. Nam luctus vitae erat at vulputate. Mauris vel efficitur metus. Nulla non gravida massa. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-                        </div>
-                    </div>
-                </div>
-    
-                <!-- FAQ Item 3 -->
-                <div class="accordion-item border-bottom">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            Is there a mobile app?
-                        </button>
-                    </h2>
-                    <div id="collapseThree" class="accordion-collapse collapse text-start" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <p>Morbi pretium felis lectus, ac porttitor metus consectetur et. Nunc sodales, orci a dignissim interdum, sem neque viverra tellus, in blandit leo dolor sed lectus. Aliquam eu metus at lectus lacinia molestie ut quis metus. Donec nulla neque, euismod eget sapien nec, aliquam porta nisi.</p>
-                        </div>
-                    </div>
-                </div>
-    
-                <!-- FAQ Item 4 -->
-                <div class="accordion-item border-bottom">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                            What about other Chromium browsers?
-                        </button>
-                    </h2>
-                    <div id="collapseFour" class="accordion-collapse collapse text-start" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <p>Nulla facilisi. Maecenas tincidunt dui eget leo placerat pretium. Donec accumsan, felis ut interdum commodo, enim magna imperdiet nulla, vitae posuere tortor ante id eros. Nulla in lacus quam. Praesent sit amet leo ut sapien scelerisque pellentesque. Duis dictum lorem vel nunc dictum, at luctus justo suscipit. Mauris at lorem massa. Nullam semper, enim vitae commodo gravida, neque dolor venenatis lorem, in sagittis augue justo non magna.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    
-        <!-- Spacer for layout adjustment -->
-        <div class="w-100"></div>
-    
-        <!-- More Info Button -->
-        <div class="col-lg-5 col-12">
-            <button class="btn btn-primary p-2 px-3">More Info</button>
-        </div>
-    </div>
+	<div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel"><i class="fas fa-cart-arrow-down"></i> My Cart</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<h3 class="text-center bill px-5">Shopping Cart</h3>
+					<table class="table">
+						<thead>
+							<tr>
+								<th scope="col">Product</th>
+								<th scope="col">Price</th>
+								<th scope="col">Qty.</th>
+								<th scope="col">Total <small>(with discount)</small></th>
+							</tr>
+						</thead>
+						<tbody id="cart_list">
+						</tbody>
+					</table>
+					<div class="text-center fs-3">
+						Total: $<span id="total_price">0.00</span>
+					</div>
+					<div class="text-center">
+						<a href="checkout.html" class="btn btn-primary m-3">Checkout</a>
+						<a href="javascript:void(0)" onclick="cleanCart()" class="btn btn-primary m-3">Clean Cart</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
-    <!-- EXERCICI 5 -->
-    <!-- Footer -->
-    <a id="contact"></a>
-    <div class="row mt-5 g-0">
-    <div class="col-12 bg-primary2 text-center">
-        <div class="p-5">
-            <h5 class="text-white mt-5">35,000 + ALREADY JOINED</h5>
-            <h2 class="text-white mt-3 mb-5">Stay up-to-date with what we're doing</h2>
-            <form class="needs-validation" novalidate>
-                <div class="mb-3 row justify-content-center align-items-start">
-                    <div class="col-12 col-lg-4 my-3 my-lg-0">
-                        <input type="email" class="form-control d-grid p-3 p-lg-2 fs-5 text-black-50" placeholder="Enter your email address" required>
-                        <div class="invalid-feedback">Whoops, make sure it's an email</div>
-                    </div>
-                    <div class="col-12 col-lg-2">
-                        <button type="submit" class="btn btn-danger w-100 p-3 p-lg-2 fs-5 text-white">Contact Us</button>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
+	<!-- Bootstrap core JS-->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+		crossorigin="anonymous"></script>
 
-    <!-- Lower footer -->
-    <div class="container-fluid bg-dark" id="footer">
-        <div class="container-xl pt-4 pt-lg-2 pb-4 pb-lg-2">
-            <ul class="nav flex-column flex-lg-row align-items-center text-uppercase text-white py-3 ms-lg-5">
-                <li class="nav-item">
-                    <a class="navbar-brand" href="#">
-                        <svg width="148" height="25" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M37 6.299h5.227c.746 0 1.434.155 2.062.466.629.311 1.123.735 1.484 1.27s.542 1.12.542 1.754c0 .672-.165 1.254-.495 1.746-.33.491-.762.868-1.297 1.129v.15c.697.248 1.25.643 1.661 1.185.41.541.616 1.191.616 1.95 0 .735-.196 1.385-.588 1.951a3.817 3.817 0 0 1-1.587 1.307c-.665.305-1.403.457-2.212.457H37V6.299zm5.04 5.45c.548 0 .986-.152 1.316-.457.33-.305.495-.688.495-1.148 0-.448-.159-.824-.476-1.13-.318-.304-.738-.457-1.26-.457H39.52v3.192h2.52zm.28 5.619c.61 0 1.086-.159 1.428-.476.342-.317.513-.731.513-1.241 0-.51-.174-.927-.522-1.251-.349-.324-.847-.485-1.494-.485H39.52v3.453h2.8zm12.927 2.595c-1.307 0-2.492-.308-3.556-.924a6.711 6.711 0 0 1-2.511-2.53c-.61-1.07-.915-2.246-.915-3.528 0-1.281.305-2.457.915-3.528a6.711 6.711 0 0 1 2.51-2.529C52.756 6.308 53.94 6 55.248 6c1.306 0 2.492.308 3.556.924a6.711 6.711 0 0 1 2.51 2.53c.61 1.07.915 2.246.915 3.527 0 1.282-.305 2.458-.915 3.528a6.711 6.711 0 0 1-2.51 2.53c-1.064.616-2.25.924-3.556.924zm0-2.39a4.52 4.52 0 0 0 2.258-.578 4.177 4.177 0 0 0 1.615-1.624c.392-.697.588-1.494.588-2.39 0-.896-.196-1.692-.588-2.389a4.177 4.177 0 0 0-1.615-1.624 4.52 4.52 0 0 0-2.258-.579 4.47 4.47 0 0 0-2.25.579 4.195 4.195 0 0 0-1.605 1.624c-.392.697-.588 1.493-.588 2.39 0 .895.196 1.692.588 2.389a4.195 4.195 0 0 0 1.605 1.624 4.47 4.47 0 0 0 2.25.578zm15.353 2.39c-1.307 0-2.492-.308-3.556-.924a6.711 6.711 0 0 1-2.51-2.53c-.61-1.07-.915-2.246-.915-3.528 0-1.281.305-2.457.914-3.528a6.711 6.711 0 0 1 2.511-2.529C68.108 6.308 69.294 6 70.6 6c1.307 0 2.492.308 3.556.924a6.711 6.711 0 0 1 2.51 2.53c.61 1.07.915 2.246.915 3.527 0 1.282-.305 2.458-.914 3.528a6.711 6.711 0 0 1-2.511 2.53c-1.064.616-2.25.924-3.556.924zm0-2.39a4.52 4.52 0 0 0 2.259-.578 4.177 4.177 0 0 0 1.614-1.624c.392-.697.588-1.494.588-2.39 0-.896-.196-1.692-.588-2.389a4.177 4.177 0 0 0-1.614-1.624 4.52 4.52 0 0 0-2.259-.579 4.47 4.47 0 0 0-2.25.579 4.195 4.195 0 0 0-1.605 1.624c-.392.697-.588 1.493-.588 2.39 0 .895.196 1.692.588 2.389a4.195 4.195 0 0 0 1.606 1.624 4.47 4.47 0 0 0 2.249.578zM79.83 6.3h2.52v5.73h.15l4.89-5.73h3.043v.149L85.6 11.973l5.338 7.542v.149h-3.08l-3.994-5.693-1.512 1.773v3.92h-2.52V6.299zM93.779 6h3.248l3.546 9.39h.15L104.268 6h3.267v13.365h-2.501v-6.589l.15-2.221h-.15l-3.398 8.81h-1.96l-3.416-8.81h-.149l.15 2.221v6.59h-2.483V6zm20.8 0h2.894l5.021 13.365h-2.781l-1.12-3.192h-5.115l-1.12 3.192h-2.781L114.579 6zm3.193 7.859l-1.176-3.36-.486-1.606h-.149l-.485 1.606-1.195 3.36h3.49zM124.553 6h4.872c.871 0 1.646.18 2.324.541.678.361 1.204.862 1.577 1.503.374.64.56 1.366.56 2.175 0 .858-.27 1.62-.812 2.286a4.617 4.617 0 0 1-2.044 1.447l-.018.13 3.584 5.134v.15h-2.894l-3.453-5.022h-1.176v5.021h-2.52V6zm4.853 6.03c.573 0 1.04-.175 1.4-.523.361-.349.542-.79.542-1.326 0-.51-.172-.945-.514-1.306-.342-.361-.806-.542-1.39-.542h-2.371v3.696h2.333zm7.23-6.03h2.52v5.73h.15l4.89-5.73h3.043v.15l-4.835 5.525 5.34 7.541v.15h-3.08l-3.996-5.694-1.512 1.773v3.92h-2.52V6z" fill="white" fill-rule="nonzero"/><g><circle fill="#5267DF" cx="12.5" cy="12.5" r="12.5"/><path d="M9 9v10l3.54-3.44L16.078 19V9a2 2 0 0 0-2-2H11a2 2 0 0 0-2 2z" fill="#FFF"/></g></g></svg>
-                    </a>
-                </li>
-
-                <!-- Navs -->
-                <li class="nav-item">
-                    <a class="nav-link text-white mt-4 mt-lg-0 ms-lg-5" href="#features">features</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white mt-3 mb-3 mt-lg-0 mb-lg-0" href="#pricing">pricing</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white mb-4 mb-lg-0" href="#footer">contact</a>
-                </li>
-
-                <!-- Social -->
-                <li class="nav-item mt-2 mt-lg-0 mb-lg-2 ms-lg-auto me-lg-5">
-                    <a class="me-4 pt-2 social" href="https://www.facebook.com/" target="_blank">
-                        <img src="assets/icon-facebook.svg" alt="facebook-icon" height="19" class="social-icon" >
-                    </a>
-                    <a class="me-4 pt-2 social" href="https://www.twitter.com/" target="_blank">
-                        <img src="assets/icon-twitter.svg" alt="twitter-icon" height="18" class="social-icon">
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>  
-
-    <!-- Bootstrap JS Bundle -->
-    <script src="./bootstrap/bootstrap.bundle.min.js"></script>
-
-    <!-- Script empty flieds -->
-    <script src="script.js"></script>
+	<!-- Core theme JS-->
+	<script src="js/products.js"></script>
+	<script src="js/shop.js"></script>
+	<script src="js/checkout.js"></script>
 </body>
+
 </html>
