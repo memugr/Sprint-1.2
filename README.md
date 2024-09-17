@@ -1,66 +1,47 @@
-# Sprint 2 IT Academy | Shop
+# Sprint 1.2: Bootstrap & SASS
+This repository contains the code and related files for Sprint S1.2.
 
-## Introduction
+# Description
+S1.2: Bookmark Manager is a software development project aimed at practicing Bootstrap and SASS.
 
-A company in the e-commerce sector has asked us for a web application that allows them to offer the purchase of their products through the internet.
+# Installation
+To use this project, follow these steps:
 
-You will be in charge of setting up an initial demo version of the application for the client: management of the shopping cart and the application of the promotions on the final price. You have 1 week to finish this part of sprint (2.2).
+1. Clone this repository to your local machine. 
 
-<br>
-
-## Requirements
-
-
-1. Clone this repo
-```bash
-$ git clone https://github.com/IT-Academy-BCN/starter-code-frontend-shop
+```
+git clone https://github.com/yourusername/sprint-s1.2-bootstrap-sass.git
 ```
 
-2. Unlink your repo from the itacademy repository.
-(Explanation: You have to upload the code to your GitHub repository, not to the IT Academy. That's why you have to unlink your project from IT Academy GitHub with the following command)
+2. Execute **npm i** to install all depencies 
+3. Open the main file index.html to start.
 
-```bash
-$ git remote rm origin
+# Contribution
+Provided you wish to contribute to this project, please follow these steps:
+
+1. Fork the Repository: Click on the 'Fork' button of this repository page.
+2. Clone the Forked Repository: Clone your forked repository to your local machine.
+
+```
+git clone https://github.com/yourusername/sprint-s1.2-bootstrap-sass.git
+```
+3. Create a New Branch: Create a new branch for your feature/bug fix or similar.
+
+```
+git checkout -b feature/new-feature
 ```
 
-3. Link your repo to the repository you have to create in your github account
-(Explanation: Now your project is not linked to any remote repository. In order to upload your code, you have to link your project to the new repository created on github.com using the following command)
+4. Make Changes: Make your changes to the codebase.
+5. Commit Changes: Commit your changes with a descriptive commit message.
 
-```bash
-$ git remote add origin <your repo name!>
+```
+git commit -am 'Add new feature'
 ```
 
-<br>
+6. Push to Your Branch: Push your changes to your forked repository.
 
-## Submission
+```
+git push origin feature/new-feature
+```
 
-1. It is necessary to upload each exercise in a separate commit. The commit name must clearly indicate its content.
-
-2. Upload the link to your GitHub repository to the virtual campus, enabling your mentor to review and provide feedback.
-
-
-
-<br>
-
-## Introduction
-
-The statement of the exercise is available on the virtual campus.
-
-<br>
-
-
-## Instructions
-
-You have the following indications from the frontend manager:
-
-- You have prepared the base of the project on which you will work: https://github.com/IT-Academy-BCN/starter-code-frontend-shop
-
-- The base of the project on which you will work has already created all the files, and an initial version of the interface, so you can focus on programming the logic.
-
-- As at the moment we don't consume data from a server using an API, we will work with hardcoded data in the application. For the moment we will implement the logic using a small group of 9 products divided in 3 sections.
-
-- Except for the last level, showing the result of the functions by console is enough.
-
-- The logic to implement will be placed in the src/grocery.js and src/checkout.js files. You will see that the built in functions have already been created for you to implement them.
-
-- It is forbidden to copy the code, since this way you don't learn anything. Furthermore, as you can see, the second release of sprint 5 is a mini-level test with the mentor, in which you will have to demonstrate live that you have acquired the javascript concepts. Don't worry, if you work on the releases you won't have any problems.
+7. Create a Pull Request: Go to the original repository and click on 'New Pull Request'. Select the branch you just pushed your changes to and submit your pull request. Be sure to provide a description of your changes.
