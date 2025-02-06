@@ -10,11 +10,10 @@ To use this project, follow these steps:
 1. Clone this repository to your local machine. 
 
 ```
-git clone https://github.com/yourusername/sprint-s1.2-bootstrap-sass.git
+git clone https://github.com/memugr/Sprint-1.2
 ```
 
-2. Execute **npm i** to install all depencies 
-3. Open the main file index.html to start.
+2. Open the main file index.html to start.
 
 # Contribution
 Provided you wish to contribute to this project, please follow these steps:
@@ -23,7 +22,7 @@ Provided you wish to contribute to this project, please follow these steps:
 2. Clone the Forked Repository: Clone your forked repository to your local machine.
 
 ```
-git clone https://github.com/yourusername/sprint-s1.2-bootstrap-sass.git
+git clone https://github.com/memugr/Sprint-1.2
 ```
 3. Create a New Branch: Create a new branch for your feature/bug fix or similar.
 
